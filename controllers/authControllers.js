@@ -56,13 +56,13 @@ exports.login = async (req, res) => {
     }
 }
 
-exports.getUser = async ( req, res) => {
-    try {
-        const user = await User.findOne ({ user: req.user_id})
-        if (!user) {
-            req.status(400).json({ message: "Not Found"})
-        }
-    } catch (error) {
-        console.log({ message: error.message })
-    }
-}
+// exports.getUser = async ( req, res) => {
+//     try {
+//         const user = await User.findById ({ user: req.user._id}).populate("firstName")
+//         if (!user) {
+//             res.status(400).json({ message: "Not Found"})
+//         }
+//     } catch (error) {
+//         console.log({ message: error.message })
+//     }
+// }
